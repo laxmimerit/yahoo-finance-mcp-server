@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "yahoo-finance": {
+      "command": "uvx",
+      "args": ["yahoo-finance-mcp-server"]
+    }
+  }
+}

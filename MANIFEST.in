@@ -1,5 +1,2 @@
 include README.md
 include LICENSE
-include pyproject.toml
-include claude_desktop_config.example.json
-recursive-include src/yahoo_finance_mcp_server *.py

@@ -28,7 +28,7 @@ uvx yahoo-finance-mcp-server
 Install the package using `uv`:
 
 ```bash
-uv pip install yahoo-finance-mcp-server-server
+uv pip install yahoo-finance-mcp-server
 ```
 
 ### Using pip
@@ -98,7 +98,7 @@ Add this to your Claude Desktop configuration file:
 For other MCP clients that support stdio transport, you can run:
 
 ```bash
-yahoo-finance-mcp
+yahoo-finance-mcp-server
 ```
 
 Or with uvx:
@@ -245,7 +245,7 @@ Once configured with Claude Desktop or another MCP client, you can ask questions
 ```bash
 # Clone the repository
 git clone https://github.com/laxmimerit/yahoo-finance-mcp-server.git
-cd yahoo-finance-mcp
+cd yahoo-finance-mcp-server
 
 # Install with development dependencies
 uv pip install -e ".[dev]"

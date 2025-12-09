@@ -1,3 +1,14 @@
+"""
+Yahoo Finance MCP Server
+
+This module provides a Model Context Protocol (MCP) server for accessing
+Yahoo Finance data. It enables AI assistants to fetch stock market information
+including prices, financial statements, news, options, and analyst recommendations.
+
+Author: Laxmi Kant Tiwari
+License: MIT
+"""
+
 import json
 from enum import Enum
 

@@ -2,6 +2,8 @@
 
 A Model Context Protocol (MCP) server that provides access to Yahoo Finance data. This server enables AI assistants to fetch real-time stock prices, financial statements, news, options data, and more through a standardized interface.
 
+PIP: https://pypi.org/project/yahoo-finance-mcp-server/
+
 ## Features
 
 - **Historical Stock Prices**: Get historical price data with customizable periods and intervals

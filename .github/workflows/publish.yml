@@ -4,10 +4,16 @@ on:
   push:
     tags:
       - 'v*'  # Triggers on version tags like v0.1.0, v0.1.1, etc.
+  workflow_dispatch:  # Manual re-publish of the current main
 
 jobs:
   publish:
     runs-on: ubuntu-latest
+    # Trusted Publishing: PyPI accepts this workflow's OIDC token, no API token secret
+    environment: pypi
+    permissions:
+      id-token: write
+      contents: read
 
     steps:
       - name: Checkout code
@@ -25,9 +31,4 @@ jobs:
         run: uv build
 
       - name: Publish to PyPI
-        env:
-          TWINE_USERNAME: __token__
-          TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
-        run: |
-          uv pip install --system twine
-          twine upload dist/*
+        uses: pypa/gh-action-pypi-publish@release/v1

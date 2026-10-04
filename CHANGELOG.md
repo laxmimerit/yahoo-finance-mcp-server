@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.3] - 2026-10-04
+
+### Fixed
+- The server no longer writes to stdout on the stdio transport. The startup message and tool error logs went to stdout, which carries the JSON-RPC stream, so MCP clients failed with `JSONRPCMessage` "Invalid JSON" errors. They now go to stderr.
+
+### Added
+- Regression test that starts the server over stdio and checks stdout holds only JSON-RPC messages
+
 ## [0.1.2] - 2024-12-09
 
 ### Added
